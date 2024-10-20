@@ -1,0 +1,28 @@
+{
+  "name": "klarex",
+  "version": "0.0.1",
+  "author": "Philip Fan <topfyf@qq.com>",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "test": "gradle check",
+    "lint": "lint-staged",
+    "format": "ktfmt --meta-style --set-exit-if-changed ."
+  },
+  "lint-staged": {
+    "*.{kt,kts}": "ktfmt --meta-style --set-exit-if-changed"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
